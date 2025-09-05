@@ -7,7 +7,7 @@ def ball_movement():
     global ball_speed_x, ball_speed_y, score, start
 
     # Move the ball
-    ball.x += ball_speed_x
+    ball.x += ball_speed_x #hduahuah
     ball.y += ball_speed_y
 
     # Start the ball movement when the game begins

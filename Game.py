@@ -1,4 +1,4 @@
-import pygames, sys, random
+import pygame, sys, random
 
 def ball_movement():
     """
@@ -131,3 +131,4 @@ while True:
     pygame.display.flip()
 
     clock.tick(60)  # Maintain 60 frames per second
+

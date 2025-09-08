@@ -7,7 +7,7 @@ def ball_movement():
     global ball_speed_x, ball_speed_y, score, start
 
     # Move the ball
-    ball.x += ball_speed_x #hduahuah
+    ball.x += ball_speed_x
     ball.y += ball_speed_y
 
     # Start the ball movement when the game begins
@@ -71,7 +71,7 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Pong')  # Set window title
 
 # Colors
-bg_color = pygame.Color('darkgreen')
+bg_color = pygame.Color('grey12')
 
 # Game Rectangles (ball and player paddle)
 ball = pygame.Rect(screen_width / 2 - 15, screen_height / 2 - 15, 30, 30)  # Ball (centered)
@@ -118,7 +118,7 @@ while True:
     player_movement()
 
     # Visuals
-    light_grey = pygame.Color('deeppink')
+    light_grey = pygame.Color('grey83')
     red = pygame.Color('red')
     screen.fill(bg_color)  # Clear screen with background color
     pygame.draw.rect(screen, light_grey, player)  # Draw player paddle

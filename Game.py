@@ -13,7 +13,7 @@ def ball_movement():
     ball.y += ball_speed_y
 
     # Start the ball movement when the game begins
-    # TODO Task 5 Create a Merge Conflict
+    # TODO Task 5: Done
     speed = 5
     if start:
         ball_speed_x = speed * random.choice((1, -1))  # Randomize initial horizontal direction
@@ -23,10 +23,10 @@ def ball_movement():
     # Ball collision with the player paddle
     if ball.colliderect(player):
         if abs(ball.bottom - player.top) < 10:  # Check if ball hits the top of the paddle
-            # TODO Task 2: Fix score to increase by 1
+            # TODO Task 2: Done
             score += 1   # Increase player score
             ball_speed_y *= -1.03  # Reverse ball's vertical direction
-            # TODO Task 6: Add sound effects HERE
+            # TODO Task 6: Done
             ball_sfx = pygame.mixer.Sound('Fahh Sound Effect.mp3')
             pygame.mixer.Sound.play(ball_sfx)
 
@@ -80,7 +80,7 @@ bg_color = pygame.Color('blue')
 
 # Game Rectangles (ball and player paddle)
 ball = pygame.Rect(screen_width / 2 - 15, screen_height / 2 - 15, 30, 30)  # Ball (centered)
-# TODO Task 1 Make the paddle bigger
+# TODO Task 1: Done
 player_height = 15
 player_width = 180
 player = pygame.Rect(screen_width/2 - 45, screen_height - 20, player_width, player_height)  # Player paddle
@@ -99,8 +99,8 @@ start = False  # Indicates if the game has started
 # Main game loop
 while True:
     # Event handling
-    # TODO Task 4: Add your name
-    name = "John Doe"
+    # TODO Task 4: Done
+    name = "Joedrick"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # Quit the game
             pygame.quit()

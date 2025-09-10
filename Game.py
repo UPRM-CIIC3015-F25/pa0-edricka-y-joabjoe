@@ -14,7 +14,7 @@ def ball_movement():
 
     # Start the ball movement when the game begins
     # TODO Task 5: Done
-    speed = 5
+    speed = 7
     if start:
         ball_speed_x = speed * random.choice((1, -1))  # Randomize initial horizontal direction
         ball_speed_y = speed * random.choice((1, -1))  # Randomize initial vertical direction
@@ -25,7 +25,7 @@ def ball_movement():
         if abs(ball.bottom - player.top) < 10:  # Check if ball hits the top of the paddle
             # TODO Task 2: Done
             score += 1   # Increase player score
-            ball_speed_y *= -1.03  # Reverse ball's vertical direction
+            ball_speed_y *= -1.05  # Reverse ball's vertical direction
             # TODO Task 6: Done
             ball_sfx = pygame.mixer.Sound('Fahh Sound Effect.mp3')
             pygame.mixer.Sound.play(ball_sfx)
@@ -69,8 +69,8 @@ pygame.init()
 clock = pygame.time.Clock()
 
 # Main Window setup
-screen_width = 450  # Screen width (can be adjusted)
-screen_height = 250  # Screen height (can be adjusted)
+screen_width = 460  # Screen width (can be adjusted)
+screen_height = 260  # Screen height (can be adjusted)
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Kirby WIWI')  # Set window title
 image =  pygame.image.load("OIP.png")

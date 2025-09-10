@@ -1,4 +1,7 @@
 import pygame, sys, random
+pygame.init()
+
+ #Ball Sound
 
 def ball_movement():
     """
@@ -25,7 +28,8 @@ def ball_movement():
             score += 1   # Increase player score
             ball_speed_y *= -1  # Reverse ball's vertical direction
             # TODO Task 6: Add sound effects HERE
-
+            ball_sfx = pygame.mixer.Sound('Fahh Sound Effect.mp3')
+            ball_sfx.play()
     # Ball collision with top boundary
     if ball.top <= 0:
         ball_speed_y *= -1  # Reverse ball's vertical direction
@@ -68,7 +72,7 @@ clock = pygame.time.Clock()
 screen_width = 500  # Screen width (can be adjusted)
 screen_height = 500  # Screen height (can be adjusted)
 screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption('Dih')  # Set window title
+pygame.display.set_caption('Pong')  # Set window title
 
 # Colors
 bg_color = pygame.Color('blue')
@@ -95,7 +99,7 @@ start = False  # Indicates if the game has started
 while True:
     # Event handling
     # TODO Task 4: Add your name
-    name = "John Doe"
+    name = "JoEdrick"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # Quit the game
             pygame.quit()

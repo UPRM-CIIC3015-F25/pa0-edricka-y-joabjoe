@@ -23,7 +23,7 @@ def ball_movement():
         if abs(ball.bottom - player.top) < 10:  # Check if ball hits the top of the paddle
             # TODO Task 2: Fix score to increase by 1
             score += 1   # Increase player score
-            ball_speed_y *= -1.1  # Reverse ball's vertical direction
+            ball_speed_y *= -1.03  # Reverse ball's vertical direction
             # TODO Task 6: Add sound effects HERE
 
     # Ball collision with top boundary
@@ -65,11 +65,12 @@ pygame.init()
 clock = pygame.time.Clock()
 
 # Main Window setup
-screen_width = 800  # Screen width (can be adjusted)
-screen_height = 600  # Screen height (can be adjusted)
+screen_width = 450  # Screen width (can be adjusted)
+screen_height = 250  # Screen height (can be adjusted)
 screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption('Dih')  # Set window title
-
+pygame.display.set_caption('Kirby WIWI')  # Set window title
+image =  pygame.image.load("OIP.png")
+image_rect = image.get_rect(topleft = (0,0))
 # Colors
 bg_color = pygame.Color('blue')
 
@@ -77,7 +78,7 @@ bg_color = pygame.Color('blue')
 ball = pygame.Rect(screen_width / 2 - 15, screen_height / 2 - 15, 30, 30)  # Ball (centered)
 # TODO Task 1 Make the paddle bigger
 player_height = 15
-player_width = 250
+player_width = 180
 player = pygame.Rect(screen_width/2 - 45, screen_height - 20, player_width, player_height)  # Player paddle
 
 # Game Variables
@@ -119,8 +120,9 @@ while True:
 
     # Visuals
     light_grey = pygame.Color('deeppink')
-    red = pygame.Color('red')
+    red = pygame.Color('green')
     screen.fill(bg_color)  # Clear screen with background color
+    screen.blit(image, image_rect)
     pygame.draw.rect(screen, light_grey, player)  # Draw player paddle
     # TODO Task 3: Change the Ball Color
     pygame.draw.ellipse(screen, light_grey, ball)  # Draw ball
